@@ -1,0 +1,7 @@
+state,districts,avg_index_score,leading_transparency,emerging_governance,limited_disclosure,minimal_transparency,no_public_signals,rate_public_ai_policy_exists,rate_ai_use_publicly_disclosed,rate_oversight_named,rate_board_policy_mentions_ai,rate_public_contact_available
+CA,44,26.5,0,3,0,30,11,0.068,0.000,0.750,0.068,0.841
+FL,44,20.9,0,1,0,27,16,0.023,0.000,0.636,0.000,0.750
+IL,48,23.1,0,0,0,36,12,0.000,0.000,0.750,0.000,0.812
+MI,127,28.1,0,7,0,95,25,0.055,0.000,0.803,0.039,0.976
+NY,45,25.7,0,1,0,34,10,0.022,0.000,0.778,0.022,0.911
+TX,45,27.4,0,2,0,35,8,0.044,0.000,0.822,0.022,0.933

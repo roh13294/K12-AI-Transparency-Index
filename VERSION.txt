@@ -1,0 +1,9 @@
+K–12 AI Transparency Index
+
+Version: 1.0
+Release Date: 2/20/2026
+Districts Reviewed: 353
+States Covered: MI, CA, TX, FL, NY, IL
+Average Score: 25.9
+
+This dataset reflects publicly accessible district website information at time of review.
