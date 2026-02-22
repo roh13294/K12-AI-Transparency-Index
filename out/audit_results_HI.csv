@@ -1,0 +1,2 @@
+district,state,homepage,found_policy_url,found_tech_url,found_contact_url,notes,score_0_to_5,public_ai_policy_exists,ai_use_publicly_disclosed,oversight_named,board_policy_mentions_ai,public_contact_available,evidence_public_ai_policy_exists,evidence_ai_use_publicly_disclosed,evidence_oversight_named,evidence_board_policy_mentions_ai,evidence_public_contact_available
+Hawaii Department of Education,HI,https://www.hawaiipublicschools.org/,,,,"Missing: policy, tech, contact (crawl limited)",0,0,0,0,0,0,,,,,

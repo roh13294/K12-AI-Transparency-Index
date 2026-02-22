@@ -1,0 +1,4 @@
+Dataset frozen on 2/20/2026.
+353 districts.
+6 states.
+Average score: 25.9.

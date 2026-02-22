@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>National K-12 AI Transparency Index</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1>National K-12 AI Transparency Index</h1>
+      <p class="sub">
+        Search your district. See what public AI transparency signals were found and what is missing.
+      </p>
+
+      <div class="stats">
+        <div class="stat"><div class="label">Districts</div><div class="value" id="statDistricts">-</div></div>
+        <div class="stat"><div class="label">Average Score</div><div class="value" id="statAvg">-</div></div>
+        <div class="stat"><div class="label">Zero Score</div><div class="value" id="statZero">-</div></div>
+      </div>
+
+      <div class="controls">
+        <input id="search" type="text" placeholder="Search district or state (ex: Rochester, MI or Los Angeles, CA)" />
+        <select id="scoreFilter">
+          <option value="all">All scores</option>
+          <option value="0">Score = 0</option>
+          <option value="10">Score = 10</option>
+          <option value="30">Score = 30</option>
+          <option value="60">Score = 60+</option>
+        </select>
+        <a class="link" href="methodology.html">Methodology</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="note" id="loading">Loading districts...</div>
+
+      <table id="table" class="table">
+        <thead>
+          <tr>
+            <th>District</th>
+            <th>State</th>
+            <th class="num">Score</th>
+            <th>Tier</th>
+            <th>Signals Found</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </main>
+
+    <footer class="footer">
+      <div>Versioned dataset and methodology available in the repository.</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
