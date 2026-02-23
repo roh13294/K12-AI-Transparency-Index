@@ -50,3 +50,25 @@ For media or research inquiries:
 
 Rohan Nagaram  
 rohannagaram@gmail.com
+---
+
+## National Findings (v2.0)
+
+- Districts audited: 1,913
+- States covered: 50
+- Average transparency score: 17.07 / 100
+- Median score: 30
+- Zero-score districts: 715 (37.38%)
+- Leading Transparency districts: 1
+
+This dataset represents one of the first nationwide attempts to measure public AI governance signals in K–12 education.
+
+The index evaluates publicly available signals such as:
+
+- Public AI policy documentation
+- Disclosure of AI tool usage
+- Named oversight or governance structure
+- Board-level acknowledgment of AI
+- Public contact transparency
+
+Version: v2.0 – National Release
