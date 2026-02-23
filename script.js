@@ -1,97 +1,210 @@
+
+// script.js — GitHub Pages safe, matches current index.html IDs
+
+
 let districts = [];
 
-const NATIONAL = {
-  districts: 1913,
-  avg: 17.07,
-  zero: "715 (37.38%)"
-};
 
-function setStats() {
-  document.getElementById("statDistricts").textContent = NATIONAL.districts;
-  document.getElementById("statAvg").textContent = NATIONAL.avg;
-  document.getElementById("statZero").textContent = NATIONAL.zero;
+// ---------- helpers ----------
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => {
+    switch (c) {
+      case "&": return "&amp;";
+      case "<": return "&lt;";
+      case ">": return "&gt;";
+      case '"': return "&quot;";
+      case "'": return "&#39;";
+      default: return c;
+    }
+  });
 }
+
+
+function toNum(v) {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : 0;
+}
+
+
+function tierFromScore(score) {
+  // Matches your earlier tier outputs
+  if (score >= 75) return "Leading Transparency";
+  if (score >= 60) return "Emerging Governance";
+  if (score >= 55) return "Limited Disclosure";
+  if (score >= 30) return "Minimal Transparency";
+  return "No Public AI Governance Signals";
+}
+
 
 function signalsFound(d) {
-  const hits = [];
-  if (d.public_ai_policy_exists === "1") hits.push("AI policy");
-  if (d.ai_use_publicly_disclosed === "1") hits.push("Disclosure");
-  if (d.oversight_named === "1") hits.push("Oversight");
-  if (d.board_policy_mentions_ai === "1") hits.push("Board mention");
-  if (d.public_contact_available === "1") hits.push("Public contact");
-  if (hits.length === 0) return "None found";
-  return hits.join(", ");
+  const signals = [];
+  if (toNum(d.public_ai_policy_exists) === 1) signals.push("AI policy");
+  if (toNum(d.ai_use_publicly_disclosed) === 1) signals.push("Disclosure");
+  if (toNum(d.oversight_named) === 1) signals.push("Oversight");
+  if (toNum(d.board_policy_mentions_ai) === 1) signals.push("Board policy");
+  if (toNum(d.public_contact_available) === 1) signals.push("Public contact");
+  return signals.length ? signals.join(", ") : "None found";
 }
 
-function linksCell(d) {
-  const parts = [];
-  if (d.homepage) parts.push(`<a class="a" href="${d.homepage}" target="_blank" rel="noreferrer">Homepage</a>`);
-  if (d.found_policy_url) parts.push(`<a class="a" href="${d.found_policy_url}" target="_blank" rel="noreferrer">Policy</a>`);
-  if (d.found_tech_url) parts.push(`<a class="a" href="${d.found_tech_url}" target="_blank" rel="noreferrer">Tech</a>`);
-  if (d.found_contact_url) parts.push(`<a class="a" href="${d.found_contact_url}" target="_blank" rel="noreferrer">Contact</a>`);
-  return parts.length ? parts.join(" | ") : "";
+
+function linkOrEmpty(label, url) {
+  if (!url) return "";
+  return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
 }
+
 
 function rowHtml(d) {
-  const score = Number(d.index_score);
+  const district = esc(d.district || "");
+  const state = esc(d.state || "");
+  const score = toNum(d.index_score);
+  const tier = esc(d.tier || tierFromScore(score));
+  const signals = esc(signalsFound(d));
+
+
+  const links = [
+    linkOrEmpty("Homepage", d.homepage),
+    linkOrEmpty("Policy", d.found_policy_url),
+    linkOrEmpty("Tech", d.found_tech_url),
+    linkOrEmpty("Contact", d.found_contact_url),
+  ].filter(Boolean).join(" | ");
+
+
   return `
     <tr>
-      <td>${escapeHtml(d.district || "")}</td>
-      <td><span class="badge">${escapeHtml(d.state || "")}</span></td>
-      <td class="num">${isNaN(score) ? "" : score}</td>
-      <td>${escapeHtml(d.tier || "")}</td>
-      <td>${escapeHtml(signalsFound(d))}</td>
-      <td>${linksCell(d)}</td>
+      <td>${district}</td>
+      <td><span class="pill">${state}</span></td>
+      <td>${score}</td>
+      <td>${tier}</td>
+      <td>${signals}</td>
+      <td>${links || ""}</td>
     </tr>
   `;
 }
 
-function escapeHtml(s) {
-  return String(s)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+
+// ---------- UI + filtering ----------
+function setStatus(text) {
+  const el = document.getElementById("statusText");
+  if (el) el.textContent = text;
 }
 
+
+function renderRows(list) {
+  const tbody = document.getElementById("districtTableBody");
+  if (!tbody) return;
+
+
+  const cap = 1000;
+  const shown = list.slice(0, cap);
+
+
+  tbody.innerHTML = shown.map(rowHtml).join("");
+
+
+  if (list.length > cap) {
+    setStatus(`Showing first ${cap} of ${list.length} results. Narrow your search to refine.`);
+  } else {
+    setStatus(`${list.length} results.`);
+  }
+}
+
+
 function applyFilters() {
-  const q = document.getElementById("search").value.trim().toLowerCase();
-  const sf = document.getElementById("scoreFilter").value;
+  const qEl = document.getElementById("searchInput");
+  const fEl = document.getElementById("scoreFilter");
+
+
+  const qRaw = (qEl && qEl.value) ? qEl.value.trim().toLowerCase() : "";
+  const filter = (fEl && fEl.value) ? fEl.value : "ALL";
+
 
   let out = districts;
 
-  if (q) {
-    out = out.filter(d =>
-      (d.district || "").toLowerCase().includes(q) ||
-      (d.state || "").toLowerCase().includes(q)
-    );
+
+  if (qRaw) {
+    out = out.filter((d) => {
+      const name = String(d.district || "").toLowerCase();
+      const st = String(d.state || "").toLowerCase();
+      return name.includes(qRaw) || st.includes(qRaw);
+    });
   }
 
-  if (sf !== "all") {
-    if (sf === "60") out = out.filter(d => Number(d.index_score) >= 60);
-    else out = out.filter(d => String(d.index_score) === sf);
-  }
 
-  const tbody = document.getElementById("tbody");
-  tbody.innerHTML = out.slice(0, 1000).map(rowHtml).join("");
+  out = out.filter((d) => {
+    const s = toNum(d.index_score);
 
-  const loading = document.getElementById("loading");
-  loading.textContent = out.length > 1000
-    ? `Showing first 1000 of ${out.length} results. Narrow your search to refine.`
-    : `${out.length} results.`;
+
+    if (filter === "ALL") return true;
+    if (filter === "ZERO") return s === 0;
+    if (filter === "LOW") return s >= 1 && s <= 30;
+    if (filter === "MID") return s >= 31 && s <= 60;
+    if (filter === "HIGH") return s >= 61;
+
+
+    return true;
+  });
+
+
+  renderRows(out);
 }
+
+
+// Optional: set headline stats from the loaded dataset
+function setStatsFromData() {
+  const n = districts.length;
+
+
+  const scores = districts.map((d) => toNum(d.index_score));
+  const avg = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
+  const zeros = scores.filter((s) => s === 0).length;
+  const zeroPct = n ? (zeros * 100 / n) : 0;
+
+
+  const dEl = document.getElementById("statDistricts");
+  const aEl = document.getElementById("statAvg");
+  const zEl = document.getElementById("statZero");
+
+
+  if (dEl) dEl.textContent = String(n);
+  if (aEl) aEl.textContent = avg.toFixed(2);
+  if (zEl) zEl.textContent = `${zeros} (${zeroPct.toFixed(2)}%)`;
+}
+
 
 async function init() {
-  setStats();
+  try {
+    setStatus("Loading districts...");
 
-  const res = await fetch("data/district_scores.json");
-  districts = await res.json();
 
-  document.getElementById("search").addEventListener("input", applyFilters);
-  document.getElementById("scoreFilter").addEventListener("change", applyFilters);
+    const res = await fetch("data/district_scores.json", { cache: "no-store" });
+    if (!res.ok) {
+      setStatus(`Failed to load data (HTTP ${res.status}). Check data/district_scores.json is committed.`);
+      return;
+    }
 
-  applyFilters();
+
+    districts = await res.json();
+
+
+    // Stats
+    setStatsFromData();
+
+
+    // Hook up listeners (match index.html IDs)
+    const searchEl = document.getElementById("searchInput");
+    const filterEl = document.getElementById("scoreFilter");
+
+
+    if (searchEl) searchEl.addEventListener("input", applyFilters);
+    if (filterEl) filterEl.addEventListener("change", applyFilters);
+
+
+    applyFilters();
+  } catch (e) {
+    console.error(e);
+    setStatus("Error loading districts. Check console and confirm data/district_scores.json is valid JSON.");
+  }
 }
+
 
 init();
