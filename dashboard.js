@@ -68,6 +68,17 @@ function rowHtml(d) {
     linkOrEmpty("Contact", d.found_contact_url),
   ].filter(Boolean).join(" | ");
 
+  const actionParams = new URLSearchParams({
+    district: d.district || "",
+    state: d.state || "",
+    score: score,
+    tier: d.tier || tierFromScore(score),
+    homepage: d.homepage || "",
+    policy: d.found_policy_url || "",
+    tech: d.found_tech_url || "",
+    contact: d.found_contact_url || "",
+  });
+  const actionUrl = esc("toolkits/parent_request.html?" + actionParams.toString());
 
   return `
     <tr>
@@ -77,6 +88,7 @@ function rowHtml(d) {
       <td>${tier}</td>
       <td>${signals}</td>
       <td>${links || ""}</td>
+      <td><a href="${actionUrl}" class="btn-action">Take Action</a></td>
     </tr>
   `;
 }

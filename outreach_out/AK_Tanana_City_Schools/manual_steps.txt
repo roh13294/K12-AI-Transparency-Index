@@ -1,0 +1,9 @@
+MANUAL LOOKUP NEEDED
+
+District: Tanana City Schools (AK)
+Homepage: http://aktcsd.schoolwires.net/site/default.aspx
+
+Steps:
+1) Open homepage.
+2) Search for: 'Board', 'School Board', 'Staff Directory', 'District Office'.
+3) Copy superintendent/board clerk email into targets.csv (priority_email) and rerun drafts.

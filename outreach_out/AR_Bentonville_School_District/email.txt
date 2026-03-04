@@ -1,0 +1,17 @@
+Dear District Leadership,
+
+My name is Rohan Nagaram. I run the National K–12 AI Transparency Index, a public, student-led review of publicly available AI governance disclosures across 1,913 school districts nationwide.
+
+I reviewed Bentonville School District’s publicly accessible materials and recorded an index score of 0/100 (No Public AI Governance Signals). If I missed an existing AI policy or disclosure page, I would appreciate the correct link so I can update the record for accuracy.
+
+If these disclosures are not currently published, I can share a free, lightweight 30-day transparency implementation template designed to reduce administrative burden and improve trust with families.
+
+Dashboard: https://roh13294.github.io/K12-AI-Transparency-Index/
+District homepage reviewed: http://bentonvillek12.org/
+Notes: Missing: policy, tech, contact (crawl limited)
+
+Thank you for your time and service to students and families.
+
+Respectfully,
+Rohan Nagaram
+https://roh13294.github.io/K12-AI-Transparency-Index/

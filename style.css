@@ -53,8 +53,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-input,
-select {
+input, select {
   background: #111826;
   color: white;
   border: 1px solid #30363d;
@@ -97,8 +96,7 @@ a:hover {
   border-collapse: collapse;
 }
 
-th,
-td {
+th, td {
   padding: 12px;
   border-bottom: 1px solid #21262d;
 }

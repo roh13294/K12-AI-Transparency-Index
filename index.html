@@ -17,7 +17,6 @@
         <p class="subtitle">
           Search your district. See what public AI transparency signals were found and what is missing.
         </p>
-
         <p class="meta">
           Version v2.0 | February 2026 | 1,913 Districts | 50 States
         </p>
@@ -26,71 +25,49 @@
       <section class="stats">
         <div class="stat-card">
           <div class="stat-label">Districts</div>
-          <div class="stat-value" id="statDistricts">1913</div>
+          <div class="stat-value" id="statDistricts">—</div>
         </div>
 
         <div class="stat-card">
           <div class="stat-label">Average Score</div>
-          <div class="stat-value" id="statAvg">17.07</div>
+          <div class="stat-value" id="statAvg">—</div>
         </div>
 
         <div class="stat-card">
           <div class="stat-label">Zero Score</div>
-          <div class="stat-value" id="statZero">715 (37.38%)</div>
+          <div class="stat-value" id="statZero">—</div>
         </div>
       </section>
 
       <section class="controls">
-        <div class="controls-row">
-          <input id="searchInput" type="text" placeholder="Search by district name" autocomplete="off" />
+        <input id="searchInput" type="text" placeholder="Search district or state" autocomplete="off" />
 
-          <select id="scoreFilter">
-            <option value="ALL">All scores</option>
-            <option value="ZERO">Score = 0</option>
-            <option value="LOW">Low (1 to 30)</option>
-            <option value="MID">Mid (31 to 60)</option>
-            <option value="HIGH">High (61+)</option>
-          </select>
+        <select id="scoreFilter">
+          <option value="ALL">All scores</option>
+          <option value="ZERO">Score = 0</option>
+          <option value="LOW">Low (1–30)</option>
+          <option value="MID">Mid (31–60)</option>
+          <option value="HIGH">High (61+)</option>
+        </select>
 
-          <a class="btn" id="methodologyBtn" href="methodology.html">Methodology</a>
+        <a class="btn" href="methodology.html">Methodology</a>
+      </section>
+
+      <section class="panel">
+        <h3>Public Toolkits</h3>
+        <p>
+          If your district scores low, you can use these free implementation kits.
+        </p>
+
+        <div class="toolkit-links">
+          <a href="toolkits/parent_toolkit.html" class="btn">Request transparency from your district</a>
         </div>
-      </section>
-
-      <!-- NEW: Parent-facing section -->
-      <section class="panel">
-        <h3>For Parents</h3>
-        <p>
-          If your district scores low, you can use a free toolkit to request clearer AI governance and public
-          disclosure.
-          This is meant to reduce friction for families who want answers.
-        </p>
-        <p>
-          Toolkit links (public):
-          <br />
-          <a href="methodology.md" target="_blank" rel="noopener">Methodology (markdown)</a>
-          <br />
-          <a href="executive_summary.md" target="_blank" rel="noopener">Executive summary</a>
-          <br />
-          <a href="README.md" target="_blank" rel="noopener">Repository overview</a>
-        </p>
-      </section>
-
-      <!-- NEW: Impact tracker -->
-      <section class="panel">
-        <h3>Impact Tracker</h3>
-        <ul>
-          <li>Districts audited: 1,913</li>
-          <li>States covered: 50</li>
-          <li>Zero transparency districts identified: 715</li>
-          <li>Median score: 30</li>
-          <li>Dashboard version: v2.0</li>
-        </ul>
       </section>
 
       <section class="table-wrap">
         <div id="statusText" class="status">Loading districts...</div>
 
-        <table class="table" id="districtTable">
+        <table class="table">
           <thead>
             <tr>
               <th>District</th>
@@ -99,22 +76,21 @@
               <th>Tier</th>
               <th>Signals Found</th>
               <th>Links</th>
+              <th>Action</th>
             </tr>
           </thead>
-          <tbody id="districtTableBody">
-            <!-- script.js populates rows -->
-          </tbody>
+          <tbody id="districtTableBody"></tbody>
         </table>
 
         <div class="footer-note">
-          Versioned dataset and methodology available in the repository.
+          Versioned dataset and methodology available in repository.
         </div>
       </section>
 
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="dashboard.js?v=2"></script>
 </body>
 
 </html>

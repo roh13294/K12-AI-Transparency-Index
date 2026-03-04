@@ -1,0 +1,9 @@
+MANUAL LOOKUP NEEDED
+
+District: Calhoun County (AL)
+Homepage: https://al01901382.schoolwires.net/ccboe
+
+Steps:
+1) Open homepage.
+2) Search for: 'Board', 'School Board', 'Staff Directory', 'District Office'.
+3) Copy superintendent/board clerk email into targets.csv (priority_email) and rerun drafts.
