@@ -1,71 +1,69 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Parent Action Generator — K-12 AI Transparency Index</title>
-    <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parent Action Generator — K-12 AI Transparency Index</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
-    <div class="page">
-        <div class="container">
+  <div class="page">
+    <div class="container">
 
-            <header class="header">
-                <h1>Parent Action Generator</h1>
-                <p class="subtitle" id="subtitle">
-                    Generate a copy-paste request letter, board comment, and a one-page report for your district.
-                </p>
+      <header class="header">
+        <h1>Parent Action Generator</h1>
+        <p class="subtitle" id="subtitle">
+          Generate a copy-paste request letter, board comment, and a one-page report for your district.
+        </p>
 
-                <p class="meta" id="metaLine"></p>
+        <p class="meta" id="metaLine"></p>
 
-                <div class="controls-row" style="margin-top:14px;">
-                    <a class="btn" href="../index.html">Back to Dashboard</a>
-                    <a class="btn" href="../methodology.html">Methodology</a>
-                </div>
-            </header>
-
-            <section class="panel">
-                <h3>District</h3>
-                <div id="districtCard" style="line-height:1.6;"></div>
-                <div style="margin-top:12px;">
-                    <button class="btn" id="btnPdf">Download 1-page PDF Report</button>
-                    <button class="btn ghost" id="btnCopyLinks">Copy evidence links</button>
-                </div>
-                <div class="footer-note" id="hintLine" style="margin-top:10px;"></div>
-            </section>
-
-            <section class="panel" id="requestSection">
-                <h3>1) Parent Public Request Letter</h3>
-                <p class="meta">
-                    This is written to be polite, specific, and easy to answer. Replace the bracket fields, then send.
-                </p>
-                <textarea id="requestText" style="width:100%; min-height:320px;"></textarea>
-                <div style="margin-top:12px;">
-                    <button class="btn" id="btnCopyRequest">Copy letter</button>
-                    <button class="btn ghost" id="btnDownloadRequest">Download .txt</button>
-                </div>
-            </section>
-
-            <section class="panel" id="commentSection">
-                <h3>2) Board Meeting Comment Script</h3>
-                <p class="meta">
-                    Keep it under 60 seconds. Calm tone. One clear ask.
-                </p>
-                <textarea id="commentText" style="width:100%; min-height:220px;"></textarea>
-                <div style="margin-top:12px;">
-                    <button class="btn" id="btnCopyComment">Copy comment</button>
-                    <button class="btn ghost" id="btnDownloadComment">Download .txt</button>
-                </div>
-            </section>
-
+        <div class="controls-row" style="margin-top:14px;">
+          <a class="btn" href="../index.html">Back to Dashboard</a>
+          <a class="btn" href="../methodology.html">Methodology</a>
         </div>
+      </header>
+
+      <section class="panel">
+        <h3>District</h3>
+        <div id="districtCard" style="line-height:1.6;"></div>
+        <div style="margin-top:12px;">
+          <button class="btn" id="btnPdf">Download 1-page PDF Report</button>
+          <button class="btn ghost" id="btnCopyLinks">Copy evidence links</button>
+        </div>
+        <div class="footer-note" id="hintLine" style="margin-top:10px;"></div>
+      </section>
+
+      <section class="panel" id="requestSection">
+        <h3>1) Parent Public Request Letter</h3>
+        <p class="meta">
+          This is written to be polite, specific, and easy to answer. Replace the bracket fields, then send.
+        </p>
+        <textarea id="requestText" style="width:100%; min-height:320px;"></textarea>
+        <div style="margin-top:12px;">
+          <button class="btn" id="btnCopyRequest">Copy letter</button>
+          <button class="btn ghost" id="btnDownloadRequest">Download .txt</button>
+        </div>
+      </section>
+
+      <section class="panel" id="commentSection">
+        <h3>2) Board Meeting Comment Script</h3>
+        <p class="meta">
+          Keep it under 60 seconds. Calm tone. One clear ask.
+        </p>
+        <textarea id="commentText" style="width:100%; min-height:220px;"></textarea>
+        <div style="margin-top:12px;">
+          <button class="btn" id="btnCopyComment">Copy comment</button>
+          <button class="btn ghost" id="btnDownloadComment">Download .txt</button>
+        </div>
+      </section>
+
     </div>
+  </div>
 
-    <!-- jsPDF for one-page PDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="parent_request.js"></script>
+  <!-- jsPDF for one-page PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="parent_toolkit.js?v=1"></script>
 </body>
-
 </html>

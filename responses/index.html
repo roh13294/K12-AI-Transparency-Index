@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>District Responses Tracker - National K-12 AI Transparency Index</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .status-contacted { background: rgba(255, 193, 7, 0.2); border-color: rgba(255, 193, 7, 0.5); color: #ffeb3b; }
+    .status-responded { background: rgba(76, 175, 80, 0.2); border-color: rgba(76, 175, 80, 0.5); color: #81c784; }
+    .status-no-response { background: rgba(244, 67, 54, 0.2); border-color: rgba(244, 67, 54, 0.5); color: #e57373; }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="container">
+
+      <header class="header">
+        <h1>District Responses Tracker</h1>
+        <p class="subtitle">
+          Tracking outreach to Michigan districts that scored zero on the National K-12 AI Transparency Index.
+        </p>
+        <p class="meta">
+          <a href="../index.html">← Back to Index</a>
+        </p>
+      </header>
+
+      <section class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>District Name</th>
+              <th>Score</th>
+              <th>Date Contacted</th>
+              <th>Response Status</th>
+            </tr>
+          </thead>
+          <tbody id="responsesTableBody">
+            <!-- Populated by responses.js -->
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="responses.js"></script>
+</body>
+
+</html>

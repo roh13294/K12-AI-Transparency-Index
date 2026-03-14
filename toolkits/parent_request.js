@@ -1,43 +1,43 @@
 function getParam(name) {
-    return new URLSearchParams(window.location.search).get(name) || "";
+  return new URLSearchParams(window.location.search).get(name) || "";
 }
 
 function cleanUrl(u) {
-    u = (u || "").trim();
-    return u;
+  u = (u || "").trim();
+  return u;
 }
 
 function copyText(txt) {
-    navigator.clipboard.writeText(txt);
+  navigator.clipboard.writeText(txt);
 }
 
 function downloadText(filename, text) {
-    const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+  const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
 }
 
 function wrapLines(doc, text, x, y, maxWidth, lineHeight) {
-    const lines = doc.splitTextToSize(text, maxWidth);
-    lines.forEach((line, i) => doc.text(line, x, y + i * lineHeight));
-    return y + lines.length * lineHeight;
+  const lines = doc.splitTextToSize(text, maxWidth);
+  lines.forEach((line, i) => doc.text(line, x, y + i * lineHeight));
+  return y + lines.length * lineHeight;
 }
 
 function buildEvidenceBlock(homepage, policy, tech, contact) {
-    const parts = [];
-    if (homepage) parts.push(`Homepage: ${homepage}`);
-    if (policy) parts.push(`Policy page: ${policy}`);
-    if (tech) parts.push(`Technology page: ${tech}`);
-    if (contact) parts.push(`Contact page: ${contact}`);
-    return parts.length ? parts.join("\n") : "No evidence links were captured in the automated crawl.";
+  const parts = [];
+  if (homepage) parts.push(`Homepage: ${homepage}`);
+  if (policy) parts.push(`Policy page: ${policy}`);
+  if (tech) parts.push(`Technology page: ${tech}`);
+  if (contact) parts.push(`Contact page: ${contact}`);
+  return parts.length ? parts.join("\n") : "No evidence links were captured in the automated crawl.";
 }
 
 function buildRequestLetter(d) {
-    return `Subject: Request for district AI transparency and public disclosure
+  return `Subject: Request for district AI transparency and public disclosure
 
 Hello [Superintendent / District Office],
 
@@ -67,7 +67,7 @@ ${buildEvidenceBlock(d.homepage, d.policy, d.tech, d.contact)}
 }
 
 function buildBoardComment(d) {
-    return `Hello Board Members,
+  return `Hello Board Members,
 
 My name is [Name] and I’m a parent/community member.
 
@@ -85,79 +85,79 @@ Thank you.
 }
 
 function makePdf(d) {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ unit: "pt", format: "letter" });
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: "pt", format: "letter" });
 
-    const marginX = 54;
-    let y = 64;
+  const marginX = 54;
+  let y = 64;
 
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(16);
-    doc.text("K–12 AI Transparency — District Summary", marginX, y);
-    y += 22;
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(16);
+  doc.text("K–12 AI Transparency — District Summary", marginX, y);
+  y += 22;
 
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(11);
-    y = wrapLines(
-        doc,
-        `District: ${d.district}\nState: ${d.state}\nIndex score: ${d.score}/100\nTier: ${d.tier}`,
-        marginX,
-        y,
-        504,
-        14
-    );
-    y += 10;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(11);
+  y = wrapLines(
+    doc,
+    `District: ${d.district}\nState: ${d.state}\nIndex score: ${d.score}/100\nTier: ${d.tier}`,
+    marginX,
+    y,
+    504,
+    14
+  );
+  y += 10;
 
-    doc.setFont("helvetica", "bold");
-    doc.text("Evidence links (public)", marginX, y);
-    y += 16;
+  doc.setFont("helvetica", "bold");
+  doc.text("Evidence links (public)", marginX, y);
+  y += 16;
 
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(10);
-    y = wrapLines(doc, buildEvidenceBlock(d.homepage, d.policy, d.tech, d.contact), marginX, y, 504, 13);
-    y += 10;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  y = wrapLines(doc, buildEvidenceBlock(d.homepage, d.policy, d.tech, d.contact), marginX, y, 504, 13);
+  y += 10;
 
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(11);
-    doc.text("What families can ask for (3 items)", marginX, y);
-    y += 16;
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(11);
+  doc.text("What families can ask for (3 items)", marginX, y);
+  y += 16;
 
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(10);
-    y = wrapLines(
-        doc,
-        "1) Public list of AI tools used (instruction + admin)\n2) Oversight owner (role/title) + review process\n3) Public parent contact route for AI questions",
-        marginX,
-        y,
-        504,
-        13
-    );
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  y = wrapLines(
+    doc,
+    "1) Public list of AI tools used (instruction + admin)\n2) Oversight owner (role/title) + review process\n3) Public parent contact route for AI questions",
+    marginX,
+    y,
+    504,
+    13
+  );
 
-    y += 18;
-    doc.setFontSize(9);
-    doc.text("Dashboard: https://roh13294.github.io/K12-AI-Transparency-Index/", marginX, y);
+  y += 18;
+  doc.setFontSize(9);
+  doc.text("Dashboard: https://roh13294.github.io/K12-AI-Transparency-Index/", marginX, y);
 
-    const filenameSafe = `${d.state}_${d.district}`.replace(/[^\w\-]+/g, "_").slice(0, 80);
-    doc.save(`${filenameSafe}_AI_Transparency_Summary.pdf`);
+  const filenameSafe = `${d.state}_${d.district}`.replace(/[^\w\-]+/g, "_").slice(0, 80);
+  doc.save(`${filenameSafe}_AI_Transparency_Summary.pdf`);
 }
 
 function init() {
-    const d = {
-        mode: getParam("mode") || "request",
-        district: getParam("district"),
-        state: getParam("state"),
-        score: getParam("score"),
-        tier: getParam("tier"),
-        homepage: cleanUrl(getParam("homepage")),
-        policy: cleanUrl(getParam("policy")),
-        tech: cleanUrl(getParam("tech")),
-        contact: cleanUrl(getParam("contact")),
-    };
+  const d = {
+    mode: getParam("mode") || "request",
+    district: getParam("district"),
+    state: getParam("state"),
+    score: getParam("score"),
+    tier: getParam("tier"),
+    homepage: cleanUrl(getParam("homepage")),
+    policy: cleanUrl(getParam("policy")),
+    tech: cleanUrl(getParam("tech")),
+    contact: cleanUrl(getParam("contact")),
+  };
 
-    document.getElementById("metaLine").textContent =
-        `${d.district} | ${d.state} | Score ${d.score}/100 | ${d.tier}`;
+  document.getElementById("metaLine").textContent =
+    `${d.district} | ${d.state} | Score ${d.score}/100 | ${d.tier}`;
 
-    const card = `
+  const card = `
     <div><strong>${d.district}</strong> (${d.state})</div>
     <div>Score: <strong>${d.score}/100</strong> | Tier: ${d.tier}</div>
     <div style="margin-top:8px;">
@@ -167,39 +167,39 @@ function init() {
       ${d.contact ? `<div>Contact: <a target="_blank" rel="noopener" href="${d.contact}">${d.contact}</a></div>` : ""}
     </div>
   `;
-    document.getElementById("districtCard").innerHTML = card;
+  document.getElementById("districtCard").innerHTML = card;
 
-    document.getElementById("hintLine").textContent =
-        "Tip: If your district’s score is low, ask for a public AI tools list, an oversight owner, and a parent contact route. Simple transparency first.";
+  document.getElementById("hintLine").textContent =
+    "Tip: If your district’s score is low, ask for a public AI tools list, an oversight owner, and a parent contact route. Simple transparency first.";
 
-    const request = buildRequestLetter(d);
-    const comment = buildBoardComment(d);
+  const request = buildRequestLetter(d);
+  const comment = buildBoardComment(d);
 
-    document.getElementById("requestText").value = request;
-    document.getElementById("commentText").value = comment;
+  document.getElementById("requestText").value = request;
+  document.getElementById("commentText").value = comment;
 
-    document.getElementById("btnCopyRequest").onclick = () => copyText(document.getElementById("requestText").value);
-    document.getElementById("btnDownloadRequest").onclick = () =>
-        downloadText(`${d.state}_${d.district}_parent_request.txt`.replace(/[^\w\-]+/g, "_"), document.getElementById("requestText").value);
+  document.getElementById("btnCopyRequest").onclick = () => copyText(document.getElementById("requestText").value);
+  document.getElementById("btnDownloadRequest").onclick = () =>
+    downloadText(`${d.state}_${d.district}_parent_request.txt`.replace(/[^\w\-]+/g, "_"), document.getElementById("requestText").value);
 
-    document.getElementById("btnCopyComment").onclick = () => copyText(document.getElementById("commentText").value);
-    document.getElementById("btnDownloadComment").onclick = () =>
-        downloadText(`${d.state}_${d.district}_board_comment.txt`.replace(/[^\w\-]+/g, "_"), document.getElementById("commentText").value);
+  document.getElementById("btnCopyComment").onclick = () => copyText(document.getElementById("commentText").value);
+  document.getElementById("btnDownloadComment").onclick = () =>
+    downloadText(`${d.state}_${d.district}_board_comment.txt`.replace(/[^\w\-]+/g, "_"), document.getElementById("commentText").value);
 
-    document.getElementById("btnCopyLinks").onclick = () =>
-        copyText(buildEvidenceBlock(d.homepage, d.policy, d.tech, d.contact));
+  document.getElementById("btnCopyLinks").onclick = () =>
+    copyText(buildEvidenceBlock(d.homepage, d.policy, d.tech, d.contact));
 
-    document.getElementById("btnPdf").onclick = () => makePdf(d);
+  document.getElementById("btnPdf").onclick = () => makePdf(d);
 
-    // If someone hits #pdf, auto-generate immediately
-    if (window.location.hash === "#pdf") {
-        setTimeout(() => makePdf(d), 250);
-    }
+  // If someone hits #pdf, auto-generate immediately
+  if (window.location.hash === "#pdf") {
+    setTimeout(() => makePdf(d), 250);
+  }
 
-    // If mode=comment, scroll to comment section
-    if ((d.mode || "").toLowerCase() === "comment") {
-        setTimeout(() => document.getElementById("commentSection").scrollIntoView({ behavior: "smooth" }), 200);
-    }
+  // If mode=comment, scroll to comment section
+  if ((d.mode || "").toLowerCase() === "comment") {
+    setTimeout(() => document.getElementById("commentSection").scrollIntoView({ behavior: "smooth" }), 200);
+  }
 }
 
 init();

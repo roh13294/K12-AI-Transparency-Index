@@ -1,0 +1,36 @@
+::1 - - [14/Mar/2026 17:45:30] "GET / HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:45:30] "GET /dashboard.js?v=2 HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:45:30] "GET /style.css HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:45:30] code 404, message File not found
+::1 - - [14/Mar/2026 17:45:30] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [14/Mar/2026 17:45:30] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:45:46] "GET / HTTP/1.1" 304 -
+::1 - - [14/Mar/2026 17:45:46] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:46:14] "GET /dashboard.js HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:46:37] "GET / HTTP/1.1" 304 -
+::1 - - [14/Mar/2026 17:47:30] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:47:39] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:47:53] "GET /responses/index.html HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:47:53] "GET /responses/responses.js HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:47:59] "GET /index.html?t=123456 HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:47:59] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:48:37] "GET /index.html?t=123456 HTTP/1.1" 304 -
+::1 - - [14/Mar/2026 17:48:37] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:48:45] "GET /responses/responses.js HTTP/1.1" 304 -
+::1 - - [14/Mar/2026 17:52:10] "GET / HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:10] "GET /style.css HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:10] "GET /dashboard.js?v=2 HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:10] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:10] code 404, message File not found
+::1 - - [14/Mar/2026 17:52:10] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [14/Mar/2026 17:52:11] "GET /responses/index.html HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:11] "GET /responses/responses.js HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:13] "GET /index.html HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:13] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:45] "GET /toolkits/parent_toolkit.html HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:45] "GET /toolkits/parent_toolkit.js?v=2 HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:47] "GET /toolkits/district_toolkit.html HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:47] "GET /toolkits/district_toolkit.js?v=2 HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:48] "GET /dashboard.js?v=2 HTTP/1.1" 304 -
+::1 - - [14/Mar/2026 17:52:48] "GET /data/district_scores.json HTTP/1.1" 200 -
+::1 - - [14/Mar/2026 17:52:53] "GET /data/district_scores.json HTTP/1.1" 200 -

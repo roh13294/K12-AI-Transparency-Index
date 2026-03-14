@@ -1,8 +1,18 @@
+// script.js — GitHub Pages safe, defensive against missing IDs
+
 "use strict";
 
-// dashboard.js — ONLY for index.html
-
 let districts = [];
+
+// ---------- tiny DOM helpers ----------
+function $(id) {
+  return document.getElementById(id);
+}
+
+function setText(id, text) {
+  const el = $(id);
+  if (el) el.textContent = text;
+}
 
 function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, (c) => {
@@ -22,6 +32,7 @@ function toNum(v) {
   return Number.isFinite(n) ? n : 0;
 }
 
+// If tier is missing in JSON, compute it from score
 function tierFromScore(score) {
   if (score >= 75) return "Leading Transparency";
   if (score >= 60) return "Emerging Governance";
@@ -42,13 +53,15 @@ function signalsFound(d) {
 
 function linkOrEmpty(label, url) {
   if (!url) return "";
-  return `<a class="link" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
+  const safe = esc(url);
+  return `<a href="${safe}" target="_blank" rel="noopener">${esc(label)}</a>`;
 }
 
 function rowHtml(d) {
   const district = esc(d.district || "");
   const state = esc(d.state || "");
   const score = toNum(d.index_score);
+
   const tier = esc(d.tier || tierFromScore(score));
   const signals = esc(signalsFound(d));
 
@@ -57,7 +70,7 @@ function rowHtml(d) {
     linkOrEmpty("Policy", d.found_policy_url),
     linkOrEmpty("Tech", d.found_tech_url),
     linkOrEmpty("Contact", d.found_contact_url),
-  ].filter(Boolean).join(" <span class='sep'>|</span> ");
+  ].filter(Boolean).join(" | ");
 
   return `
     <tr>
@@ -71,32 +84,29 @@ function rowHtml(d) {
   `;
 }
 
-function setStatus(text) {
-  const el = document.getElementById("statusText");
-  if (el) el.textContent = text;
-}
-
+// ---------- render + filters ----------
 function renderRows(list) {
-  const tbody = document.getElementById("districtTableBody");
+  const tbody = $("districtTableBody");
   if (!tbody) return;
 
   const cap = 1000;
   const shown = list.slice(0, cap);
+
   tbody.innerHTML = shown.map(rowHtml).join("");
 
   if (list.length > cap) {
-    setStatus(`Showing first ${cap} of ${list.length} results. Narrow your search to refine.`);
+    setText("statusText", `Showing first ${cap} of ${list.length} results. Narrow your search to refine.`);
   } else {
-    setStatus(`${list.length} results.`);
+    setText("statusText", `${list.length} results.`);
   }
 }
 
 function applyFilters() {
-  const qEl = document.getElementById("searchInput");
-  const fEl = document.getElementById("scoreFilter");
+  const qEl = $("searchInput");
+  const fEl = $("scoreFilter");
 
   const q = (qEl?.value || "").trim().toLowerCase();
-  const filter = fEl?.value || "ALL";
+  const filter = (fEl?.value || "ALL").toUpperCase();
 
   let out = districts;
 
@@ -110,11 +120,13 @@ function applyFilters() {
 
   out = out.filter((d) => {
     const s = toNum(d.index_score);
+
     if (filter === "ALL") return true;
     if (filter === "ZERO") return s === 0;
     if (filter === "LOW") return s >= 1 && s <= 30;
     if (filter === "MID") return s >= 31 && s <= 60;
     if (filter === "HIGH") return s >= 61;
+
     return true;
   });
 
@@ -124,52 +136,40 @@ function applyFilters() {
 function setStatsFromData() {
   const n = districts.length;
   const scores = districts.map((d) => toNum(d.index_score));
+
   const avg = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   const zeros = scores.filter((s) => s === 0).length;
   const zeroPct = n ? (zeros * 100 / n) : 0;
 
-  document.getElementById("statDistricts").textContent = String(n);
-  document.getElementById("statAvg").textContent = avg.toFixed(2);
-  document.getElementById("statZero").textContent = `${zeros} (${zeroPct.toFixed(2)}%)`;
+  setText("statDistricts", String(n));
+  setText("statAvg", avg.toFixed(2));
+  setText("statZero", `${zeros} (${zeroPct.toFixed(2)}%)`);
 }
 
 async function init() {
-  setStatus("Loading districts...");
+  // these IDs exist in your index.html, but we still guard anyway
+  setText("statusText", "Loading districts...");
 
-  let res;
   try {
-    res = await fetch("data/district_scores.json", { cache: "no-store" });
-  } catch (err) {
-    if (window.location.protocol === "file:") {
-      setStatus("Error: Browsers block loading JSON data via file:// protocol. Please use a local web server (e.g. python3 -m http.server)");
-    } else {
-      setStatus("Network error failed to load district data.");
+    // Use a relative path that works for localhost AND GitHub Pages
+    const res = await fetch("./data/district_scores.json", { cache: "no-store" });
+    if (!res.ok) {
+      setText("statusText", `Failed to load data (HTTP ${res.status}). Check data/district_scores.json is committed.`);
+      return;
     }
-    return;
+
+    districts = await res.json();
+    setStatsFromData();
+
+    $("searchInput")?.addEventListener("input", applyFilters);
+    $("scoreFilter")?.addEventListener("change", applyFilters);
+
+    applyFilters();
+  } catch (e) {
+    console.error(e);
+    setText("statusText", "Error loading districts. Check console + confirm district_scores.json is valid JSON.");
   }
-
-  if (!res.ok) {
-    setStatus(`Failed to load data (HTTP ${res.status}) at data/district_scores.json`);
-    return;
-  }
-
-  const data = await res.json();
-  districts = Array.isArray(data) ? data : (data?.districts || data?.rows || []);
-
-  if (!Array.isArray(districts) || districts.length === 0) {
-    setStatus("Loaded JSON but found 0 rows. JSON might not be an array.");
-    return;
-  }
-
-  setStatsFromData();
-
-  document.getElementById("searchInput")?.addEventListener("input", applyFilters);
-  document.getElementById("scoreFilter")?.addEventListener("change", applyFilters);
-
-  applyFilters();
 }
 
-init().catch((e) => {
-  console.error("Dashboard init error:", e);
-  setStatus("JavaScript crashed during initialization. Check console for details.");
-});
+// IMPORTANT: wait until DOM is loaded (fixes your null/textContent crash)
+window.addEventListener("DOMContentLoaded", init);
