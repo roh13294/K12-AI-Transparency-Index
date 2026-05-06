@@ -4,17 +4,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>National K-12 AI Transparency Index</title>
+  <title>K–12 AI Transparency Index | National District AI Transparency Audit</title>
+  <meta name="description" content="The K–12 AI Transparency Index tracks public AI transparency signals across 1,913 school districts in all 50 states, with district audit scores, methodology, responses, toolkits, and a national coalition action layer." />
+  <meta property="og:title" content="K–12 AI Transparency Index" />
+  <meta property="og:description" content="Student-led national project tracking public AI transparency signals across 1,913 school districts in all 50 states." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://roh13294.github.io/K12-AI-Transparency-Index/index.html" />
+  <link rel="canonical" href="https://roh13294.github.io/K12-AI-Transparency-Index/index.html" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body data-page="index" data-base-prefix="">
   <div class="page">
     <div class="container">
+      <div data-site-nav></div>
 
-      <header class="header">
-        <h1>National K-12 AI Transparency Index</h1>
-        <p class="subtitle">
+      <header class="header hero-header">
+        <p class="eyebrow">Research and Action</p>
+        <h1>K–12 AI Transparency Index</h1>
+        <p class="subtitle lede">
           Search your district. See what public AI transparency signals were found and what is missing.
         </p>
         <p class="meta">
@@ -22,7 +30,7 @@
         </p>
       </header>
 
-      <section class="stats">
+      <section class="stats" aria-label="Index statistics">
         <div class="stat-card">
           <div class="stat-label">Districts</div>
           <div class="stat-value" id="statDistricts">—</div>
@@ -39,10 +47,27 @@
         </div>
       </section>
 
-      <section class="controls">
+      <section class="callout section" id="from-index-to-action">
+        <p class="eyebrow">From Index to Action</p>
+        <h2 class="section-title">The index identifies transparency gaps. The coalition turns that evidence into action.</h2>
+        <p class="section-copy">
+          The K–12 AI Transparency Index identifies where public AI disclosure is missing. Students for K–12 AI Transparency turns that evidence into action by helping students, parents, school boards, and policymakers push for basic AI disclosure, student data protections, and human review.
+        </p>
+        <p class="section-copy">
+          We are not anti-AI. We are pro-transparency. Students and families deserve to know when AI is used in schools, what data it processes, and what human protections exist.
+        </p>
+        <div class="cta-group">
+          <a class="btn external-form" data-config-link="joinFormUrl" href="https://forms.gle/fhhreQ1nHUoaTuw86" target="_blank" rel="noopener">Join via Google Form</a>
+          <a class="btn secondary" href="toolkits/index.html#request-transparency">Request Transparency From Your District</a>
+          <a class="btn ghost" href="model-policy.html">View Model Policy</a>
+        </div>
+        <p class="meta-note">Coalition applications open in Google Forms.</p>
+      </section>
+
+      <section class="controls panel">
         <input id="searchInput" type="text" placeholder="Search district or state" autocomplete="off" />
 
-        <select id="scoreFilter">
+        <select id="scoreFilter" aria-label="Filter by score">
           <option value="ALL">All scores</option>
           <option value="ZERO">Score = 0</option>
           <option value="LOW">Low (1–30)</option>
@@ -50,22 +75,56 @@
           <option value="HIGH">High (61+)</option>
         </select>
 
-        <a class="btn" href="methodology.html">Methodology</a>
-        <a class="btn" href="responses/index.html">District Responses</a>
+        <a class="btn secondary" href="methodology.html">Methodology</a>
+        <a class="btn secondary" href="responses/index.html">District Responses</a>
+        <a class="btn ghost" href="toolkits/index.html">Toolkits</a>
       </section>
 
-      <section class="panel">
-        <h3>Public Toolkits</h3>
-        <p>
-          If your district scores low, you can use these free implementation kits.
+      <section class="panel section" id="toolkits">
+        <p class="eyebrow">Public Toolkits</p>
+        <h2 class="section-title">Action tools that build on the research</h2>
+        <p class="section-copy">
+          Public schools should be able to answer basic questions about AI use, student data, and human review. These tools help families and advocates ask for that information respectfully and clearly.
         </p>
 
-        <div class="toolkit-links">
-          <a href="toolkits/parent_toolkit.html" class="btn">Request transparency from your district</a>
+        <div class="card-grid">
+          <article class="feature-card">
+            <div class="card-kicker">Toolkit 1</div>
+            <h3>Request Transparency From Your District</h3>
+            <p>Send a respectful email asking your district what AI tools are used, what data is processed, and whether human review exists.</p>
+            <a class="btn small" href="toolkits/index.html#request-transparency">Use Email Template</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-kicker">Toolkit 2</div>
+            <h3>Ask Your School Board</h3>
+            <p>Ask your school board to review AI transparency policies and consider adopting a public AI disclosure page.</p>
+            <a class="btn small" href="toolkits/index.html#board-template">Use Board Template</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-kicker">Toolkit 3</div>
+            <h3>File a Public Records Request</h3>
+            <p>For nonresponsive districts, use public records laws to request AI policies, vendor contracts, and guidance documents.</p>
+            <a class="btn small" href="toolkits/index.html#records-template">Use Records Template</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-kicker">Toolkit 4</div>
+            <h3>Become a District Advocate</h3>
+            <p>Help track one district and report whether it improves public AI transparency.</p>
+            <a class="btn small external-form" data-config-link="joinFormUrl" href="https://forms.gle/fhhreQ1nHUoaTuw86" target="_blank" rel="noopener">Apply via Form</a>
+          </article>
+        </div>
+
+        <div class="toolkit-links section-tight">
+          <a href="toolkits/parent_toolkit.html" class="btn ghost">Open Parent Toolkit</a>
+          <a href="toolkits/district_toolkit.html" class="btn ghost">Open District Toolkit</a>
+          <a href="coalition.html" class="btn ghost">Explore the Coalition</a>
         </div>
       </section>
 
-      <section class="table-wrap">
+      <section class="table-wrap" id="index-results">
         <div id="statusText" class="status">Loading districts...</div>
 
         <table class="table">
@@ -84,14 +143,15 @@
         </table>
 
         <div class="footer-note">
-          Versioned dataset and methodology available in repository.
+          Versioned dataset and methodology remain available in this repository. The index is the research layer; Students for K–12 AI Transparency is the action layer built around it.
         </div>
       </section>
-
     </div>
   </div>
 
-  <script src="dashboard.js?v=2"></script>
+  <script src="campaign-config.js"></script>
+  <script src="site.js"></script>
+  <script src="dashboard.js?v=3"></script>
 </body>
 
 </html>

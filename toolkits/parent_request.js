@@ -43,7 +43,7 @@ Hello [Superintendent / District Office],
 
 I’m a parent/community member writing with a straightforward transparency request about AI use in ${d.district}.
 
-I found your district in the National K–12 AI Transparency Index (score: ${d.score}/100, tier: ${d.tier}). The index only measures publicly visible signals, so I’m reaching out to verify what is currently documented and what can be shared publicly.
+I found your district in the K–12 AI Transparency Index (score: ${d.score}/100, tier: ${d.tier}). The index only measures publicly visible signals, so I’m reaching out to verify what is currently documented and what can be shared publicly.
 
 Could you please provide:
 
@@ -71,7 +71,7 @@ function buildBoardComment(d) {
 
 My name is [Name] and I’m a parent/community member.
 
-I’m here because AI tools are entering schools faster than public disclosure and oversight are keeping up. I checked ${d.district} in the National K–12 AI Transparency Index. The district currently scores ${d.score}/100 based on publicly visible transparency signals.
+I’m here because AI tools are entering schools faster than public disclosure and oversight are keeping up. I checked ${d.district} in the K–12 AI Transparency Index. The district currently scores ${d.score}/100 based on public AI transparency signals.
 
 My request is simple:
 1) Publish a short public page listing any approved AI tools and the purpose they are used for.

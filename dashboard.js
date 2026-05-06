@@ -23,10 +23,10 @@ function toNum(v) {
 }
 
 function tierFromScore(score) {
-  if (score >= 75) return "Leading Transparency";
+  if (score >= 80) return "Leading Transparency";
   if (score >= 60) return "Emerging Governance";
-  if (score >= 55) return "Limited Disclosure";
-  if (score >= 30) return "Minimal Transparency";
+  if (score >= 40) return "Limited Disclosure";
+  if (score >= 20) return "Minimal Transparency";
   return "No Public AI Governance Signals";
 }
 
@@ -45,6 +45,20 @@ function linkOrEmpty(label, url) {
   return `<a class="link" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
 }
 
+function actionHref(d) {
+  const params = new URLSearchParams({
+    district: d.district || "",
+    state: d.state || "",
+    score: String(toNum(d.index_score)),
+    tier: d.tier || tierFromScore(toNum(d.index_score)),
+    homepage: d.homepage || "",
+    policy: d.found_policy_url || "",
+    tech: d.found_tech_url || "",
+    contact: d.found_contact_url || "",
+  });
+  return `toolkits/parent_request.html?${params.toString()}`;
+}
+
 function rowHtml(d) {
   const district = esc(d.district || "");
   const state = esc(d.state || "");
@@ -59,6 +73,8 @@ function rowHtml(d) {
     linkOrEmpty("Contact", d.found_contact_url),
   ].filter(Boolean).join(" <span class='sep'>|</span> ");
 
+  const action = `<a class="btn small secondary" href="${actionHref(d)}">Take action</a>`;
+
   return `
     <tr>
       <td>${district}</td>
@@ -67,6 +83,7 @@ function rowHtml(d) {
       <td>${tier}</td>
       <td>${signals}</td>
       <td>${links}</td>
+      <td>${action}</td>
     </tr>
   `;
 }

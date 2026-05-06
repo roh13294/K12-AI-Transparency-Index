@@ -1,22 +1,21 @@
 # Executive Summary
-## 2026 National K–12 AI Transparency Index
+## 2026 K–12 AI Transparency Index
 
-The 2026 K–12 AI Transparency Index reviews publicly accessible artificial intelligence governance disclosures across 353 public school districts in six U.S. states.
+The 2026 K–12 AI Transparency Index reviews public AI transparency signals across 1,913 public school districts in all 50 states.
 
-Using a standardized 100-point transparency framework, districts were evaluated solely on documentation available on official district websites.
+Using a standardized 100-point framework, districts were evaluated solely on public information available on official district websites and related public materials.
 
 ## Key Results
 
-- Average district score: 25.9 / 100
-- 96% of districts demonstrate minimal transparency or no publicly accessible AI governance signals.
-- 23% show no identifiable public AI governance signals.
-- 4% demonstrate emerging governance practices.
-- No district in the sample met the threshold for leading transparency (80+).
+- Districts indexed: 1,913
+- States covered: 50
+- Average district score: 17.07 / 100
+- Median score: 30
+- Zero-score districts: 715 (37.38%)
+- Leading Transparency districts: 1
 
-The highest score observed in the dataset was 75.
+The Index does not evaluate internal implementation practices. It measures public disclosure only.
 
-The Index does not evaluate internal implementation practices. It measures only publicly accessible transparency signals.
+As AI tools increasingly shape learning, administration, counseling, monitoring, and other school functions, students and families deserve to know what tools are being used, what data they process, and what human protections exist.
 
-As AI tools increasingly influence curriculum development, student services, and administrative systems, public governance transparency may play a critical role in maintaining institutional accountability.
-
-The 2026 Index establishes a baseline measurement. Future updates may track changes in public disclosure practices over time.
+The Index establishes a national baseline. Students for K–12 AI Transparency builds on that evidence through coalition organizing, public toolkits, model policy, and legislative advocacy.

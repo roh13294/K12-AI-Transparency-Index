@@ -3,18 +3,18 @@
 
 ## Purpose
 
-The 2026 K–12 AI Transparency Index evaluates publicly accessible governance signals related to artificial intelligence use within U.S. public school districts.
+The 2026 K–12 AI Transparency Index evaluates public AI transparency signals related to artificial intelligence use within U.S. public school districts.
 
-The Index measures transparency only. It does not assess internal policy quality, implementation rigor, or vendor relationships.
+The Index measures public disclosure only. It does not assess internal policy quality, implementation rigor, or vendor relationships that are not publicly visible.
 
 ---
 
 ## Data Scope
 
-- 353 public school districts
-- 6 U.S. states
-- Data collected in 2026
-- Source: Official district websites
+- 1,913 public school districts
+- 50 U.S. states
+- February 2026 release baseline
+- Source: official district websites and publicly accessible district materials
 
 Private internal documents were not reviewed.
 
@@ -22,16 +22,16 @@ Private internal documents were not reviewed.
 
 ## Data Collection Process
 
-District websites were programmatically scanned using an automated crawler.
+District websites were reviewed using a standardized audit process focused on publicly accessible information.
 
 Each review:
 
 1. Began at the official district homepage
-2. Identified linked policy, governance, and board documentation
-3. Extracted text from HTML and publicly accessible PDFs
-4. Flagged predefined transparency indicators
+2. Identified linked policy, governance, technology, and board documentation
+3. Reviewed public text and accessible supporting materials
+4. Flagged predefined public AI transparency signals
 
-Crawl depth and time limits were standardized across districts.
+Review depth and time limits were standardized across districts.
 
 ---
 
@@ -65,8 +65,8 @@ Maximum Score: 100
 
 ## Limitations
 
-- Automated scanning may not capture deeply nested documents.
-- Website structures vary significantly.
-- The Index reflects publicly accessible information at time of review.
+- Public disclosure may not reflect internal district practices.
+- Website structures vary significantly by district.
+- The Index reflects publicly accessible information at the time of review.
 
-The Index establishes a baseline measurement and may be updated in future releases.
+The Index establishes a national baseline measurement and may be updated in future releases.

@@ -1,74 +1,85 @@
-# 2026 K–12 AI Transparency Index
+# K–12 AI Transparency Index
 
-The 2026 K–12 AI Transparency Index is a cross-state review of publicly accessible artificial intelligence governance disclosures across 353 U.S. public school districts.
+Version `v2.0`  
+February 2026  
+1,913 districts  
+50 states
 
-This Index evaluates transparency signals only. It does not assess internal implementation practices, vendor relationships, or policy quality.
+The K–12 AI Transparency Index is a student-led national project tracking public AI transparency signals across U.S. public school districts. It is designed to help students, families, educators, school boards, policymakers, and reporters understand whether districts publicly disclose basic information about AI use in schools.
 
-## Scope
+The project focuses on public AI transparency signals only. It does not claim to measure internal district practices that are not publicly disclosed.
 
-- Districts Reviewed: 353  
-- States Covered: Michigan, California, Texas, Florida, New York, Illinois  
-- Release Version: 1.0  
-- Average Score: 25.9 / 100  
+## What the site includes
 
-## Key Findings
+- K–12 AI Transparency Index homepage
+- District audit scores and searchable district table
+- Methodology page
+- District Responses page
+- Public Toolkits
+- Students for K–12 AI Transparency coalition layer
+- Model District AI Transparency Policy
+- Student AI Transparency and Human Review Act
 
-- 96% of districts demonstrate minimal transparency or no publicly accessible AI governance signals.
-- 23% show no identifiable public AI governance signals.
-- 4% demonstrate emerging governance practices.
-- 0% met the threshold for leading transparency (80+).
+## Core framing
 
-## What the Index Measures
+- We are not anti-AI. We are pro-transparency.
+- Students and families deserve to know when AI is used in schools, what data it processes, and what human protections exist.
+- The index identifies transparency gaps. The coalition turns that evidence into action.
 
-Districts are evaluated using a 100-point weighted framework based solely on publicly available documentation found on official district websites.
+## Data and structure
 
-Criteria include:
+Key repo files:
 
-- Public AI policy availability  
-- Disclosure of AI tool usage  
-- Named oversight authority  
-- Board-level AI references  
-- Public AI governance contact pathway  
-
-Full scoring details are available in `methodology.md`.
-
-## Files Included
-
+- `index.html`
+- `methodology.html`
+- `responses/index.html`
+- `toolkits/index.html`
+- `coalition.html`
+- `join.html`
+- `model-policy.html`
+- `legislation.html`
+- `dashboard.js`
+- `site.js`
+- `campaign-config.js`
+- `style.css`
+- `data/district_scores.json`
 - `data/district_scores.csv`
 - `data/state_summary.csv`
-- `methodology.md`
-- `executive_summary.md`
-- `VERSION.txt`
 
-## Important Notes
+## Static GitHub Pages deployment
 
-- The Index measures public transparency signals only.
-- Scores reflect publicly accessible documentation at time of review.
-- Districts may request re-evaluation if additional public documentation exists.
+This site is a static GitHub Pages site built with HTML, CSS, and vanilla JavaScript.
 
-For media or research inquiries:
+### Local preview
 
-Rohan Nagaram  
-rohannagaram@gmail.com
----
+From the repository root:
 
-## National Findings (v2.0)
+```bash
+python3 -m http.server
+```
 
-- Districts audited: 1,913
-- States covered: 50
-- Average transparency score: 17.07 / 100
-- Median score: 30
-- Zero-score districts: 715 (37.38%)
-- Leading Transparency districts: 1
+Then open:
 
-This dataset represents one of the first nationwide attempts to measure public AI governance signals in K–12 education.
+```text
+http://localhost:8000/
+```
 
-The index evaluates publicly available signals such as:
+### Publish on GitHub Pages
 
-- Public AI policy documentation
-- Disclosure of AI tool usage
-- Named oversight or governance structure
-- Board-level acknowledgment of AI
-- Public contact transparency
+1. Push the repository to GitHub.
+2. In the repository settings, enable GitHub Pages.
+3. Set deployment to serve from the repository root or the configured Pages branch/root used by the project.
+4. Confirm the site resolves under:
 
-Version: v2.0 – National Release
+```text
+https://roh13294.github.io/K12-AI-Transparency-Index/
+```
+
+All new links and assets are kept GitHub Pages compatible for deployment under `/K12-AI-Transparency-Index/`.
+
+## Updating coalition launch content
+
+- Update coalition counters in `campaign-config.js`
+- Update the Join form URL in `campaign-config.js`
+- Update contact placeholders in `campaign-config.js`
+- Replace placeholder download links in `campaign-config.js`

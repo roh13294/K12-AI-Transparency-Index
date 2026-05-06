@@ -1,4 +1,6 @@
-// script.js — GitHub Pages safe, defensive against missing IDs
+// script.js — legacy fallback copy of the index table logic.
+// It is currently not loaded by the live pages, which use dashboard.js.
+// Keep this file only as a non-authoritative reference unless the site wiring changes.
 
 "use strict";
 
@@ -34,10 +36,10 @@ function toNum(v) {
 
 // If tier is missing in JSON, compute it from score
 function tierFromScore(score) {
-  if (score >= 75) return "Leading Transparency";
+  if (score >= 80) return "Leading Transparency";
   if (score >= 60) return "Emerging Governance";
-  if (score >= 55) return "Limited Disclosure";
-  if (score >= 30) return "Minimal Transparency";
+  if (score >= 40) return "Limited Disclosure";
+  if (score >= 20) return "Minimal Transparency";
   return "No Public AI Governance Signals";
 }
 
