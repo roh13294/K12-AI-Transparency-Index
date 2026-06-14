@@ -7,12 +7,14 @@
 
   const navItems = [
     { key: "index", label: "Index", href: "index.html" },
+    { key: "state-rankings", label: "States", href: "state-rankings.html" },
+    { key: "real-world-examples", label: "Examples", href: "real-world-examples.html" },
     { key: "methodology", label: "Methodology", href: "methodology.html" },
-    { key: "responses", label: "District Responses", href: "responses/index.html" },
-    { key: "toolkits", label: "Toolkits", href: "toolkits/index.html" },
     { key: "coalition", label: "Coalition", href: "coalition.html" },
+    { key: "policy-staffers", label: "Staffers", href: "policy-staffers.html" },
     { key: "model-policy", label: "Model Policy", href: "model-policy.html" },
     { key: "legislation", label: "Legislation", href: "legislation.html" },
+    { key: "toolkits", label: "Toolkits", href: "toolkits/index.html" },
     { key: "join", label: "Join", href: "join.html" },
   ];
 

@@ -1,0 +1,1705 @@
+{
+  "national_summary": {
+    "generated_at": "2026-05-06",
+    "source_path": "data/district_scores.json",
+    "districts_audited": 1913,
+    "states_covered": 50,
+    "national_average_score": 17.07,
+    "national_median_score": 30.0,
+    "zero_score_districts": 715,
+    "zero_score_rate": 0.3738,
+    "median_state_average": 15.69,
+    "highest_average_state": {
+      "state_code": "MI",
+      "state_name": "Michigan",
+      "average_score": 28.07,
+      "districts_audited": 127
+    },
+    "lowest_average_state": {
+      "state_code": "HI",
+      "state_name": "Hawaii",
+      "average_score": 0.0,
+      "districts_audited": 1
+    },
+    "national_tier_distribution": {
+      "leading_transparency": 1,
+      "emerging_governance": 28,
+      "limited_disclosure": 1,
+      "minimal_transparency": 957,
+      "no_public_signals": 926
+    },
+    "criteria_labels": {
+      "public_ai_policy_exists": "Public AI policy located",
+      "ai_use_publicly_disclosed": "Public AI use disclosure located",
+      "oversight_named": "Named oversight located",
+      "board_policy_mentions_ai": "Board policy mention located",
+      "public_contact_available": "Public contact pathway located"
+    },
+    "national_criteria_counts": {
+      "public_ai_policy_exists": 30,
+      "ai_use_publicly_disclosed": 1,
+      "oversight_named": 986,
+      "board_policy_mentions_ai": 20,
+      "public_contact_available": 1171
+    },
+    "national_criteria_rates": {
+      "public_ai_policy_exists": 0.0157,
+      "ai_use_publicly_disclosed": 0.0005,
+      "oversight_named": 0.5154,
+      "board_policy_mentions_ai": 0.0105,
+      "public_contact_available": 0.6121
+    }
+  },
+  "states": [
+    {
+      "state_code": "MI",
+      "state_name": "Michigan",
+      "districts_audited": 127,
+      "average_score": 28.07,
+      "median_score": 30.0,
+      "highest_scoring_district": "Warren Woods Public Schools",
+      "highest_score": 75,
+      "lowest_scoring_district": "Beecher Community School District",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 7,
+        "limited_disclosure": 0,
+        "minimal_transparency": 95,
+        "no_public_signals": 25
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 7,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 102,
+        "board_policy_mentions_ai": 5,
+        "public_contact_available": 124
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0551,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.8031,
+        "board_policy_mentions_ai": 0.0394,
+        "public_contact_available": 0.9764
+      },
+      "rank": 1
+    },
+    {
+      "state_code": "TX",
+      "state_name": "Texas",
+      "districts_audited": 45,
+      "average_score": 27.44,
+      "median_score": 30.0,
+      "highest_scoring_district": "Georgetown Independent School District",
+      "highest_score": 75,
+      "lowest_scoring_district": "New Braunfels Independent School District",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 2,
+        "limited_disclosure": 0,
+        "minimal_transparency": 35,
+        "no_public_signals": 8
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 2,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 37,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 42
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0444,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.8222,
+        "board_policy_mentions_ai": 0.0222,
+        "public_contact_available": 0.9333
+      },
+      "rank": 2
+    },
+    {
+      "state_code": "CA",
+      "state_name": "California",
+      "districts_audited": 44,
+      "average_score": 26.48,
+      "median_score": 30.0,
+      "highest_scoring_district": "Lodi Unified School District",
+      "highest_score": 75,
+      "lowest_scoring_district": "Huntington Beach Union High School District",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 3,
+        "limited_disclosure": 0,
+        "minimal_transparency": 30,
+        "no_public_signals": 11
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 3,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 33,
+        "board_policy_mentions_ai": 3,
+        "public_contact_available": 37
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0682,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.75,
+        "board_policy_mentions_ai": 0.0682,
+        "public_contact_available": 0.8409
+      },
+      "rank": 3
+    },
+    {
+      "state_code": "NY",
+      "state_name": "New York",
+      "districts_audited": 45,
+      "average_score": 25.67,
+      "median_score": 30.0,
+      "highest_scoring_district": "Hempstead Union Free School District",
+      "highest_score": 75,
+      "lowest_scoring_district": "Brentwood Union Free School District",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 34,
+        "no_public_signals": 10
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 35,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 41
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0222,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.7778,
+        "board_policy_mentions_ai": 0.0222,
+        "public_contact_available": 0.9111
+      },
+      "rank": 4
+    },
+    {
+      "state_code": "IL",
+      "state_name": "Illinois",
+      "districts_audited": 48,
+      "average_score": 23.12,
+      "median_score": 30.0,
+      "highest_scoring_district": "Woodstock Community Unit School District 200",
+      "highest_score": 30,
+      "lowest_scoring_district": "Cicero School District 99",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 36,
+        "no_public_signals": 12
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 36,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 39
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.75,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.8125
+      },
+      "rank": 5
+    },
+    {
+      "state_code": "MO",
+      "state_name": "Missouri",
+      "districts_audited": 40,
+      "average_score": 23.12,
+      "median_score": 30.0,
+      "highest_scoring_district": "Rockwood R-VI School District",
+      "highest_score": 85,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 1,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 26,
+        "no_public_signals": 13
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 1,
+        "oversight_named": 27,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 33
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.025,
+        "oversight_named": 0.675,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.825
+      },
+      "rank": 6
+    },
+    {
+      "state_code": "VA",
+      "state_name": "Virginia",
+      "districts_audited": 40,
+      "average_score": 22.12,
+      "median_score": 30.0,
+      "highest_scoring_district": "Winchester Public Schools",
+      "highest_score": 75,
+      "lowest_scoring_district": "Alleghany County Public Schools",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 2,
+        "limited_disclosure": 0,
+        "minimal_transparency": 25,
+        "no_public_signals": 13
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 2,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 27,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 27
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.05,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.675,
+        "board_policy_mentions_ai": 0.025,
+        "public_contact_available": 0.675
+      },
+      "rank": 7
+    },
+    {
+      "state_code": "CT",
+      "state_name": "Connecticut",
+      "districts_audited": 34,
+      "average_score": 21.18,
+      "median_score": 30.0,
+      "highest_scoring_district": "Newtown Public Schools",
+      "highest_score": 60,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 21,
+        "no_public_signals": 12
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 22,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 25
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0294,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.6471,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.7353
+      },
+      "rank": 8
+    },
+    {
+      "state_code": "GA",
+      "state_name": "Georgia",
+      "districts_audited": 40,
+      "average_score": 21.12,
+      "median_score": 30.0,
+      "highest_scoring_district": "Taliaferro County School District",
+      "highest_score": 75,
+      "lowest_scoring_district": "Brooks County School District",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 23,
+        "no_public_signals": 16
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 24,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 32
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.6,
+        "board_policy_mentions_ai": 0.025,
+        "public_contact_available": 0.8
+      },
+      "rank": 9
+    },
+    {
+      "state_code": "FL",
+      "state_name": "Florida",
+      "districts_audited": 44,
+      "average_score": 20.91,
+      "median_score": 30.0,
+      "highest_scoring_district": "St. Johns County School District",
+      "highest_score": 60,
+      "lowest_scoring_district": "Alachua County Public Schools",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 27,
+        "no_public_signals": 16
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 28,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 33
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0227,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.6364,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.75
+      },
+      "rank": 10
+    },
+    {
+      "state_code": "CO",
+      "state_name": "Colorado",
+      "districts_audited": 33,
+      "average_score": 20.0,
+      "median_score": 30.0,
+      "highest_scoring_district": "Widefield School District 3",
+      "highest_score": 30,
+      "lowest_scoring_district": "Adams-Arapahoe School District 28J",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 21,
+        "no_public_signals": 12
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 21,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 24
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.6364,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.7273
+      },
+      "rank": 11
+    },
+    {
+      "state_code": "NV",
+      "state_name": "Nevada",
+      "districts_audited": 40,
+      "average_score": 19.88,
+      "median_score": 30.0,
+      "highest_scoring_district": "Humboldt County School District",
+      "highest_score": 75,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 23,
+        "no_public_signals": 16
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 24,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 27
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.6,
+        "board_policy_mentions_ai": 0.025,
+        "public_contact_available": 0.675
+      },
+      "rank": 12
+    },
+    {
+      "state_code": "AL",
+      "state_name": "Alabama",
+      "districts_audited": 40,
+      "average_score": 19.75,
+      "median_score": 30.0,
+      "highest_scoring_district": "Tuscumbia City",
+      "highest_score": 30,
+      "lowest_scoring_district": "Blount County",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 25,
+        "no_public_signals": 15
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 25,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 29
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.625,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.725
+      },
+      "rank": 13
+    },
+    {
+      "state_code": "OR",
+      "state_name": "Oregon",
+      "districts_audited": 40,
+      "average_score": 19.75,
+      "median_score": 30.0,
+      "highest_scoring_district": "Wheeler",
+      "highest_score": 30,
+      "lowest_scoring_district": "Clatsop",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 25,
+        "no_public_signals": 15
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 25,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 29
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.625,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.725
+      },
+      "rank": 14
+    },
+    {
+      "state_code": "MS",
+      "state_name": "Mississippi",
+      "districts_audited": 40,
+      "average_score": 19.62,
+      "median_score": 30.0,
+      "highest_scoring_district": "Lamar County School District (extends into Pearl County)",
+      "highest_score": 55,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 1,
+        "minimal_transparency": 24,
+        "no_public_signals": 15
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 24,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 26
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.6,
+        "board_policy_mentions_ai": 0.025,
+        "public_contact_available": 0.65
+      },
+      "rank": 15
+    },
+    {
+      "state_code": "NJ",
+      "state_name": "New Jersey",
+      "districts_audited": 40,
+      "average_score": 19.25,
+      "median_score": 30.0,
+      "highest_scoring_district": "Union Beach School System",
+      "highest_score": 75,
+      "lowest_scoring_district": "Commercial Township School District – K-8",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 2,
+        "limited_disclosure": 0,
+        "minimal_transparency": 19,
+        "no_public_signals": 19
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 2,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 21,
+        "board_policy_mentions_ai": 2,
+        "public_contact_available": 26
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.05,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.525,
+        "board_policy_mentions_ai": 0.05,
+        "public_contact_available": 0.65
+      },
+      "rank": 16
+    },
+    {
+      "state_code": "MD",
+      "state_name": "Maryland",
+      "districts_audited": 20,
+      "average_score": 18.5,
+      "median_score": 30.0,
+      "highest_scoring_district": "Worcester County Public Schools",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 12,
+        "no_public_signals": 8
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 12,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 13
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.6,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.65
+      },
+      "rank": 17
+    },
+    {
+      "state_code": "OH",
+      "state_name": "Ohio",
+      "districts_audited": 40,
+      "average_score": 18.25,
+      "median_score": 30.0,
+      "highest_scoring_district": "Woodridge Local School District , Peninsula",
+      "highest_score": 30,
+      "lowest_scoring_district": "Allen East Local School District , Lafayette",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 24,
+        "no_public_signals": 16
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 24,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 25
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.6,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.625
+      },
+      "rank": 18
+    },
+    {
+      "state_code": "MA",
+      "state_name": "Massachusetts",
+      "districts_audited": 25,
+      "average_score": 18.2,
+      "median_score": 30.0,
+      "highest_scoring_district": "Boston Public Schools ( Suffolk County , PK–12)",
+      "highest_score": 75,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 13,
+        "no_public_signals": 11
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 14,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 13
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.04,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.56,
+        "board_policy_mentions_ai": 0.04,
+        "public_contact_available": 0.52
+      },
+      "rank": 19
+    },
+    {
+      "state_code": "AK",
+      "state_name": "Alaska",
+      "districts_audited": 36,
+      "average_score": 17.5,
+      "median_score": 25.0,
+      "highest_scoring_district": "Yupiit School District",
+      "highest_score": 30,
+      "lowest_scoring_district": "Annette Island School District",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 19,
+        "no_public_signals": 17
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 19,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 25
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.5278,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.6944
+      },
+      "rank": 20
+    },
+    {
+      "state_code": "PA",
+      "state_name": "Pennsylvania",
+      "districts_audited": 40,
+      "average_score": 17.25,
+      "median_score": 30.0,
+      "highest_scoring_district": "Avonworth School District (Third Class)",
+      "highest_score": 60,
+      "lowest_scoring_district": "Allegheny",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 20,
+        "no_public_signals": 19
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 21,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 24
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.525,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.6
+      },
+      "rank": 21
+    },
+    {
+      "state_code": "AZ",
+      "state_name": "Arizona",
+      "districts_audited": 40,
+      "average_score": 17.12,
+      "median_score": 25.0,
+      "highest_scoring_district": "Wickenburg Unified School District #9",
+      "highest_score": 75,
+      "lowest_scoring_district": "Avondale",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 20,
+        "no_public_signals": 19
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 21,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 22
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.525,
+        "board_policy_mentions_ai": 0.025,
+        "public_contact_available": 0.55
+      },
+      "rank": 22
+    },
+    {
+      "state_code": "ND",
+      "state_name": "North Dakota",
+      "districts_audited": 14,
+      "average_score": 16.43,
+      "median_score": 25.0,
+      "highest_scoring_district": "Selfridge Public School District",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 8,
+        "no_public_signals": 6
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 8,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 7
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.5714,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.5
+      },
+      "rank": 23
+    },
+    {
+      "state_code": "WA",
+      "state_name": "Washington",
+      "districts_audited": 40,
+      "average_score": 16.38,
+      "median_score": 10.0,
+      "highest_scoring_district": "Renton School District 403",
+      "highest_score": 75,
+      "lowest_scoring_district": "Clallam",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 18,
+        "no_public_signals": 21
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 19,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 23
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.475,
+        "board_policy_mentions_ai": 0.025,
+        "public_contact_available": 0.575
+      },
+      "rank": 24
+    },
+    {
+      "state_code": "LA",
+      "state_name": "Louisiana",
+      "districts_audited": 40,
+      "average_score": 16.12,
+      "median_score": 10.0,
+      "highest_scoring_district": "East Baton Rouge Parish School Board",
+      "highest_score": 75,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 18,
+        "no_public_signals": 21
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 19,
+        "board_policy_mentions_ai": 1,
+        "public_contact_available": 22
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.475,
+        "board_policy_mentions_ai": 0.025,
+        "public_contact_available": 0.55
+      },
+      "rank": 25
+    },
+    {
+      "state_code": "NM",
+      "state_name": "New Mexico",
+      "districts_audited": 40,
+      "average_score": 15.25,
+      "median_score": 10.0,
+      "highest_scoring_district": "Valencia",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 19,
+        "no_public_signals": 21
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 19,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 23
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.475,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.575
+      },
+      "rank": 26
+    },
+    {
+      "state_code": "DE",
+      "state_name": "Delaware",
+      "districts_audited": 40,
+      "average_score": 14.75,
+      "median_score": 10.0,
+      "highest_scoring_district": "Seaford",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 18,
+        "no_public_signals": 22
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 18,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 23
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.45,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.575
+      },
+      "rank": 27
+    },
+    {
+      "state_code": "SD",
+      "state_name": "South Dakota",
+      "districts_audited": 40,
+      "average_score": 14.75,
+      "median_score": 10.0,
+      "highest_scoring_district": "Ziebach",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 19,
+        "no_public_signals": 21
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 19,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 21
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.475,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.525
+      },
+      "rank": 28
+    },
+    {
+      "state_code": "SC",
+      "state_name": "South Carolina",
+      "districts_audited": 40,
+      "average_score": 14.5,
+      "median_score": 10.0,
+      "highest_scoring_district": "York 1 (York)",
+      "highest_score": 30,
+      "lowest_scoring_district": "Abbeville",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 18,
+        "no_public_signals": 22
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 18,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 22
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.45,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.55
+      },
+      "rank": 29
+    },
+    {
+      "state_code": "VT",
+      "state_name": "Vermont",
+      "districts_audited": 40,
+      "average_score": 14.5,
+      "median_score": 10.0,
+      "highest_scoring_district": "Woodstock",
+      "highest_score": 30,
+      "lowest_scoring_district": "Barre (city)",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 16,
+        "no_public_signals": 24
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 16,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 26
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.4,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.65
+      },
+      "rank": 30
+    },
+    {
+      "state_code": "RI",
+      "state_name": "Rhode Island",
+      "districts_audited": 12,
+      "average_score": 14.17,
+      "median_score": 10.0,
+      "highest_scoring_district": "Northern Mariana Islands",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 6,
+        "no_public_signals": 6
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 6,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 5
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.5,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.4167
+      },
+      "rank": 31
+    },
+    {
+      "state_code": "ID",
+      "state_name": "Idaho",
+      "districts_audited": 40,
+      "average_score": 14.0,
+      "median_score": 5.0,
+      "highest_scoring_district": "Vallivue School District#139",
+      "highest_score": 60,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 16,
+        "no_public_signals": 23
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 17,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 19
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.425,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.475
+      },
+      "rank": 32
+    },
+    {
+      "state_code": "KS",
+      "state_name": "Kansas",
+      "districts_audited": 40,
+      "average_score": 13.5,
+      "median_score": 10.0,
+      "highest_scoring_district": "La Crosse USD 395",
+      "highest_score": 30,
+      "lowest_scoring_district": "Blue Valley USD 384 (Riley County)",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 15,
+        "no_public_signals": 25
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 15,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 24
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.375,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.6
+      },
+      "rank": 33
+    },
+    {
+      "state_code": "MN",
+      "state_name": "Minnesota",
+      "districts_audited": 40,
+      "average_score": 13.0,
+      "median_score": 0.0,
+      "highest_scoring_district": "Winona Independent School District (ISD #861)",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 17,
+        "no_public_signals": 23
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 17,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 18
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.425,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.45
+      },
+      "rank": 34
+    },
+    {
+      "state_code": "UT",
+      "state_name": "Utah",
+      "districts_audited": 40,
+      "average_score": 13.0,
+      "median_score": 10.0,
+      "highest_scoring_district": "Utah Shakespeare Festival",
+      "highest_score": 30,
+      "lowest_scoring_district": "2034 Winter Olympics",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 15,
+        "no_public_signals": 25
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 15,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 22
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.375,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.55
+      },
+      "rank": 35
+    },
+    {
+      "state_code": "ME",
+      "state_name": "Maine",
+      "districts_audited": 30,
+      "average_score": 13.0,
+      "median_score": 10.0,
+      "highest_scoring_district": "Yarmouth School Department",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 12,
+        "no_public_signals": 18
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 12,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 15
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.4,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.5
+      },
+      "rank": 36
+    },
+    {
+      "state_code": "TN",
+      "state_name": "Tennessee",
+      "districts_audited": 25,
+      "average_score": 12.4,
+      "median_score": 0.0,
+      "highest_scoring_district": "Williamson County Schools",
+      "highest_score": 30,
+      "lowest_scoring_district": "Achievement School District",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 10,
+        "no_public_signals": 15
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 10,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 11
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.4,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.44
+      },
+      "rank": 37
+    },
+    {
+      "state_code": "WI",
+      "state_name": "Wisconsin",
+      "districts_audited": 40,
+      "average_score": 12.25,
+      "median_score": 0.0,
+      "highest_scoring_district": "Walworth",
+      "highest_score": 30,
+      "lowest_scoring_district": "Caledonia",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 15,
+        "no_public_signals": 25
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 15,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 19
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.375,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.475
+      },
+      "rank": 38
+    },
+    {
+      "state_code": "WV",
+      "state_name": "West Virginia",
+      "districts_audited": 10,
+      "average_score": 12.0,
+      "median_score": 5.0,
+      "highest_scoring_district": "Northern Mariana Islands",
+      "highest_score": 30,
+      "lowest_scoring_district": "American Samoa",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 4,
+        "no_public_signals": 6
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 4,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 4
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.4,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.4
+      },
+      "rank": 39
+    },
+    {
+      "state_code": "OK",
+      "state_name": "Oklahoma",
+      "districts_audited": 40,
+      "average_score": 11.75,
+      "median_score": 10.0,
+      "highest_scoring_district": "Union Public Schools , Tulsa",
+      "highest_score": 30,
+      "lowest_scoring_district": "Cleveland",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 13,
+        "no_public_signals": 27
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 13,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 21
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.325,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.525
+      },
+      "rank": 40
+    },
+    {
+      "state_code": "IA",
+      "state_name": "Iowa",
+      "districts_audited": 40,
+      "average_score": 11.5,
+      "median_score": 0.0,
+      "highest_scoring_district": "H-L-V Community School District (also extends into Poweshiek County)",
+      "highest_score": 60,
+      "lowest_scoring_district": "Allamakee",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 1,
+        "limited_disclosure": 0,
+        "minimal_transparency": 13,
+        "no_public_signals": 26
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 1,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 14,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 15
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.025,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.35,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.375
+      },
+      "rank": 41
+    },
+    {
+      "state_code": "NC",
+      "state_name": "North Carolina",
+      "districts_audited": 40,
+      "average_score": 11.5,
+      "median_score": 0.0,
+      "highest_scoring_district": "Vance County Public Schools",
+      "highest_score": 30,
+      "lowest_scoring_district": "Alamance",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 14,
+        "no_public_signals": 26
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 14,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 18
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.35,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.45
+      },
+      "rank": 42
+    },
+    {
+      "state_code": "WY",
+      "state_name": "Wyoming",
+      "districts_audited": 40,
+      "average_score": 11.5,
+      "median_score": 0.0,
+      "highest_scoring_district": "Wyoming Department of Education",
+      "highest_score": 30,
+      "lowest_scoring_district": "Albany",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 15,
+        "no_public_signals": 25
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 15,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 16
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.375,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.4
+      },
+      "rank": 43
+    },
+    {
+      "state_code": "NE",
+      "state_name": "Nebraska",
+      "districts_audited": 40,
+      "average_score": 10.75,
+      "median_score": 0.0,
+      "highest_scoring_district": "Waverly School District 145",
+      "highest_score": 30,
+      "lowest_scoring_district": "Blaine",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 14,
+        "no_public_signals": 26
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 14,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 15
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.35,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.375
+      },
+      "rank": 44
+    },
+    {
+      "state_code": "IN",
+      "state_name": "Indiana",
+      "districts_audited": 40,
+      "average_score": 10.5,
+      "median_score": 0.0,
+      "highest_scoring_district": "Warren",
+      "highest_score": 30,
+      "lowest_scoring_district": "Carmel Clay Schools",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 12,
+        "no_public_signals": 28
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 12,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 18
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.3,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.45
+      },
+      "rank": 45
+    },
+    {
+      "state_code": "KY",
+      "state_name": "Kentucky",
+      "districts_audited": 40,
+      "average_score": 9.75,
+      "median_score": 0.0,
+      "highest_scoring_district": "Shelby",
+      "highest_score": 30,
+      "lowest_scoring_district": "Adair County Schools",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 11,
+        "no_public_signals": 29
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 11,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 17
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.275,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.425
+      },
+      "rank": 46
+    },
+    {
+      "state_code": "MT",
+      "state_name": "Montana",
+      "districts_audited": 40,
+      "average_score": 7.0,
+      "median_score": 0.0,
+      "highest_scoring_district": "Treasure",
+      "highest_score": 30,
+      "lowest_scoring_district": "Blaine",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 9,
+        "no_public_signals": 31
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 9,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 10
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.225,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.25
+      },
+      "rank": 47
+    },
+    {
+      "state_code": "AR",
+      "state_name": "Arkansas",
+      "districts_audited": 40,
+      "average_score": 6.75,
+      "median_score": 0.0,
+      "highest_scoring_district": "Stuttgart Public Schools",
+      "highest_score": 30,
+      "lowest_scoring_district": "Ashley",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 8,
+        "no_public_signals": 32
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 8,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 11
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.2,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.275
+      },
+      "rank": 48
+    },
+    {
+      "state_code": "NH",
+      "state_name": "New Hampshire",
+      "districts_audited": 40,
+      "average_score": 6.0,
+      "median_score": 0.0,
+      "highest_scoring_district": "Wolfeboro",
+      "highest_score": 30,
+      "lowest_scoring_district": "Albany",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 7,
+        "no_public_signals": 33
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 7,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 10
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.175,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.25
+      },
+      "rank": 49
+    },
+    {
+      "state_code": "HI",
+      "state_name": "Hawaii",
+      "districts_audited": 1,
+      "average_score": 0.0,
+      "median_score": 0.0,
+      "highest_scoring_district": "Hawaii Department of Education",
+      "highest_score": 0,
+      "lowest_scoring_district": "Hawaii Department of Education",
+      "lowest_score": 0,
+      "tier_distribution": {
+        "leading_transparency": 0,
+        "emerging_governance": 0,
+        "limited_disclosure": 0,
+        "minimal_transparency": 0,
+        "no_public_signals": 1
+      },
+      "criteria_counts": {
+        "public_ai_policy_exists": 0,
+        "ai_use_publicly_disclosed": 0,
+        "oversight_named": 0,
+        "board_policy_mentions_ai": 0,
+        "public_contact_available": 0
+      },
+      "criteria_rates": {
+        "public_ai_policy_exists": 0.0,
+        "ai_use_publicly_disclosed": 0.0,
+        "oversight_named": 0.0,
+        "board_policy_mentions_ai": 0.0,
+        "public_contact_available": 0.0
+      },
+      "rank": 50
+    }
+  ]
+}

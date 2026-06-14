@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>State-by-State AI Transparency Analysis | K–12 AI Transparency Index</title>
+  <meta name="description" content="Compare public AI transparency signals across states using district-level audit data from the K–12 AI Transparency Index." />
+  <meta property="og:title" content="State-by-State AI Transparency Analysis | K–12 AI Transparency Index" />
+  <meta property="og:description" content="State-level summaries of public-facing K–12 AI transparency signals based on the K–12 AI Transparency Index district audit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://roh13294.github.io/K12-AI-Transparency-Index/state-rankings.html" />
+  <link rel="canonical" href="https://roh13294.github.io/K12-AI-Transparency-Index/state-rankings.html" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="state-rankings" data-base-prefix="">
+  <div class="page">
+    <div class="container">
+      <div data-site-nav></div>
+
+      <header class="hero-panel">
+        <p class="eyebrow">State Analysis</p>
+        <h1>State-by-State AI Transparency Analysis</h1>
+        <p class="subtitle lede">
+          Compare public AI transparency signals across states using district-level audit data from the K–12 AI Transparency Index.
+        </p>
+        <p class="meta">
+          State summaries were generated from the audited district dataset on <span id="stateGeneratedAt">—</span>.
+        </p>
+      </header>
+
+      <section class="quote-panel section">
+        <h2>Interpretation note</h2>
+        <p>
+          State rankings reflect public-facing transparency signals found in district materials. They do not measure whether a district uses AI safely or unsafely, and they should be interpreted as a measure of public disclosure, not hidden internal practice.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="national-state-overview">
+        <div class="section-heading">
+          <p class="eyebrow">National State Overview</p>
+          <h2 class="section-title" id="national-state-overview">A state-level snapshot of the audited sample</h2>
+        </div>
+
+        <div class="metric-grid state-overview-grid">
+          <article class="metric-card">
+            <div class="metric-label">States covered</div>
+            <div class="metric-value" id="overviewStates">—</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">Districts audited</div>
+            <div class="metric-value" id="overviewDistricts">—</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">National average score</div>
+            <div class="metric-value" id="overviewAverage">—</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">Highest average state</div>
+            <div class="metric-value is-compact" id="overviewHighestState">—</div>
+            <div class="meta-note" id="overviewHighestStateNote">—</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">Lowest average state</div>
+            <div class="metric-value is-compact" id="overviewLowestState">—</div>
+            <div class="meta-note" id="overviewLowestStateNote">—</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">Median state average</div>
+            <div class="metric-value" id="overviewMedianState">—</div>
+          </article>
+        </div>
+
+        <p class="footer-note">
+          State averages reflect the districts audited in this dataset, not every district in each state. Sample sizes vary by state and should be read alongside the district count column.
+        </p>
+      </section>
+
+      <section class="panel section" aria-labelledby="state-rankings-table">
+        <div class="section-heading">
+          <p class="eyebrow">State Rankings Table</p>
+          <h2 class="section-title" id="state-rankings-table">Compare audited states and search by name</h2>
+        </div>
+        <p class="section-copy">
+          Search by full state name or abbreviation. Sort by average score, district count, median score, or alphabetical order.
+        </p>
+
+        <div class="controls">
+          <input id="stateSearchInput" type="text" placeholder="Search state or abbreviation" autocomplete="off" />
+          <select id="stateSortSelect" aria-label="Sort states">
+            <option value="avg-desc">Average score: high to low</option>
+            <option value="avg-asc">Average score: low to high</option>
+            <option value="districts-desc">District count: high to low</option>
+            <option value="districts-asc">District count: low to high</option>
+            <option value="median-desc">Median score: high to low</option>
+            <option value="median-asc">Median score: low to high</option>
+            <option value="state-asc">State: A to Z</option>
+            <option value="state-desc">State: Z to A</option>
+          </select>
+        </div>
+
+        <div id="stateStatusText" class="status">Loading state summaries...</div>
+
+        <div class="table-wrap">
+          <table class="table state-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>State</th>
+                <th>Districts Audited</th>
+                <th>Average Score</th>
+                <th>Median Score</th>
+                <th>Highest-Scoring District</th>
+                <th>Lowest-Scoring District</th>
+                <th>Tier Distribution</th>
+              </tr>
+            </thead>
+            <tbody id="stateTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="interpret-rankings">
+        <div class="section-heading">
+          <p class="eyebrow">How to Interpret These Rankings</p>
+          <h2 class="section-title" id="interpret-rankings">Use the rankings as a disclosure baseline, not a verdict</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card">
+            <h3>Public transparency signals only</h3>
+            <p>These rankings are based on public-facing transparency signals located under the project methodology, not hidden internal practice.</p>
+          </article>
+          <article class="feature-card">
+            <h3>What a low score means</h3>
+            <p>A low score means limited public-facing documentation was found under the methodology. It does not prove the absence of internal policy.</p>
+          </article>
+          <article class="feature-card">
+            <h3>What a high score means</h3>
+            <p>A higher score means stronger public evidence of transparency, governance language, oversight, or public disclosure in the audited materials.</p>
+          </article>
+          <article class="feature-card">
+            <h3>What the rankings should prompt</h3>
+            <p>The goal is review and improvement, not blame. Rankings should help districts, lawmakers, and families ask clearer questions about disclosure.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <p class="eyebrow">Policy Next Steps</p>
+        <h2 class="section-title">Move from state comparisons to practical action</h2>
+        <p class="section-copy">
+          Use the state analysis alongside the coalition materials, model district policy, and legislative memo to brief school boards, legislative offices, and local advocates.
+        </p>
+        <div class="cta-group">
+          <a class="btn ghost" href="model-policy.html">View Model Policy</a>
+          <a class="btn secondary download" data-config-link="legislativeMemoUrl" href="docs/Student_AI_Transparency_and_Human_Review_Act_Memo.pdf">Download Legislative Memo</a>
+          <a class="btn" href="policy-staffers.html">For Policy Staffers</a>
+          <a class="btn secondary" href="coalition.html">Join the Coalition</a>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <p class="eyebrow">Using the Data Responsibly</p>
+        <p class="section-copy">
+          The index should be used to ask better questions, not to assume hidden misconduct. A low score means the project did not find clear public-facing evidence under the methodology. Districts may submit corrections or public links for review.
+        </p>
+        <div class="responsible-links">
+          <a class="btn ghost" href="responses/index.html">District Responses</a>
+          <a class="btn contact" data-config-email="contactEmail" data-mailto-subject="District Data Correction or Public Link Submission" href="mailto:ronysbrand@gmail.com?subject=District%20Data%20Correction%20or%20Public%20Link%20Submission">Submit a Correction</a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="campaign-config.js"></script>
+  <script src="site.js"></script>
+  <script src="state-rankings.js"></script>
+</body>
+
+</html>
